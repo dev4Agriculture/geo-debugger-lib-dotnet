@@ -9,7 +9,7 @@ The GeoDebugger is a tool to display GeoBased information. It consists of a libr
 
 Additionally, a Tool like e.g. [QGis](https://qgis.org/de/site/) can be used to display the data.
 
-For Details, see the (GeoDebugger Server Repository](https://github.com/dev4Agriculture/geodebug_server).
+For Details, see the [GeoDebugger Server Repository](https://github.com/dev4Agriculture/geo-debugger-server).
 
 ## About the Author
 ![dev4Agriculture](resources/banner_dev4ag.png)
