@@ -1,11 +1,11 @@
-# geodebug-dotnet
+# geo-debugger-lib-dotnet
 A nuget package to communicate with the geodebugger
 
 
 ## About GeoDebugger
 
 The GeoDebugger is a tool to display GeoBased information. It consists of a library (this)
- and a [GeoDebugger Server](https://github.com/dev4Agriculture/geodebug_server).
+ and a [GeoDebugger Server](https://github.com/dev4Agriculture/geo-debugger-server).
 
 Additionally, a Tool like e.g. [QGis](https://qgis.org/de/site/) can be used to display the data.
 
