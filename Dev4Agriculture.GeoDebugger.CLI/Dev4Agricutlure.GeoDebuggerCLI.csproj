@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\De.Dev4Agriculture.GeoDebugger\De.Dev4Agriculture.GeoDebugger.csproj" />
+    <ProjectReference Include="..\Dev4Agriculture.GeoDebugger\Dev4Agriculture.GeoDebugger.csproj" />
   </ItemGroup>
 
 </Project>

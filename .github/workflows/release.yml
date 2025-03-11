@@ -21,8 +21,8 @@ on:
       - name: Test
         run: dotnet test --configuration Release /p:Version=${VERSION} --no-build
       - name: Pack
-        run: dotnet pack De.Dev4Agriculture.GeoDebugger/De.Dev4Agriculture.GeoDebugger.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
+        run: dotnet pack Dev4Agriculture.GeoDebugger/Dev4Agriculture.GeoDebugger.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
       - name: Push
-        run: dotnet nuget push De.Dev4Agriculture.GeoDebugger.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${GITHUB_TOKEN}
         env:
-          GITHUB_TOKEN: ${{ secrets.ISOXML_DOTNET_NUGET_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GEODEBUGGER_NUGET_KEY }}
+        run: dotnet nuget push Dev4Agriculture.GeoDebugger.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${GITHUB_TOKEN}

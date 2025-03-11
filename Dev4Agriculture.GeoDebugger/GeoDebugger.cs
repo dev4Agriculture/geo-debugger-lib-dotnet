@@ -1,15 +1,11 @@
 ﻿using GeoJSON.Net.Feature;
-using GeoJSON.Net.Geometry;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace Dev4Agriculture.De.GeoDebugger;
+namespace Dev4Agriculture.GeoDebugger
+{
+
 
 internal class MessageToSend
     {
@@ -34,6 +30,12 @@ internal class FeatureBlock
 		this.lastUpdate = DateTime.Now;
 		this.collection.Features.Add(feature);
 	}
+
+	internal void AddAll(List<Feature> features){
+		this.lastUpdate = DateTime.Now;
+		this.collection.Features.AddRange(features);
+	}
+
 
 	internal bool hasUpdates(DateTime lastSendingTime)
 	{
@@ -121,6 +123,17 @@ internal class FeaturesBlockList
 		}
 	}
 
+
+	internal void AddAllFeatures(List<Feature> features, int index = 0)
+	{
+		lock(_blocks){
+			while (_blocks.Count <= index)
+			{
+				this._blocks.Add(new FeatureBlock(_blocks.Count));
+			}
+			this._blocks[index].AddAll(features);
+		}
+	}
 
 	internal int GetSize()
 	{
@@ -323,6 +336,22 @@ public class GeoJSONDebug
 		}
 	}
 
+	public static void AddFeatureList(IEnumerable<Feature> features, int index = 0){
+		var points = features.Where(entry => entry.Type == GeoJSON.Net.GeoJSONObjectType.Point).ToList();
+		var polygons = features.Where(entry => entry.Type == GeoJSON.Net.GeoJSONObjectType.Polygon).ToList();
+		var lines = features.Where(entry => entry.Type == GeoJSON.Net.GeoJSONObjectType.LineString).ToList();
+		if(points.Count()> 0 ){
+			PointFeatureBlocks.AddAllFeatures(points,index);
+		}
+		if(polygons.Count()> 0 ){
+			PolygonFeatureBlocks.AddAllFeatures(points,index);
+		}
+		if(lines.Count()> 0 ){
+			LineFeatureBlocks.AddAllFeatures(points,index);
+		}
+	}
+
+
 	public static async Task DebugClearFeatures()
 	{
 		await PointFeatureBlocks.DebugClearAll(DebugUrl);
@@ -374,3 +403,4 @@ public class GeoJSONDebug
 		ClearPolygons();
         }
     }
+}
