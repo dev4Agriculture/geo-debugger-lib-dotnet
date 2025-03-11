@@ -1,0 +1,5 @@
+v0.0.2:
++ADD: Set multiple Features at once.
+
+v0.0.1: 
+First Release. Hello World :)
