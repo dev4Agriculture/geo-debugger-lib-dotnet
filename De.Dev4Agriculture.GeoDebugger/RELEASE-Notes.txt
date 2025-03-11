@@ -1,0 +1,5 @@
+v0.0.2:
+Testing the ReleasePipeline
+
+v0.0.1: 
+First Release. Hello World :)

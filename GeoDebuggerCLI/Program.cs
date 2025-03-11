@@ -1,4 +1,4 @@
-﻿using Dev4Agriculture.De.GeoDebugger;
+﻿using De.Dev4Agriculture.GeoDebugger;
 using GeoJSON.Net.Feature;
 using GeoJSON.Net.Geometry;
 using System;

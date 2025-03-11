@@ -1,15 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoDebugger_DotNet", "GeoDebugger_DotNet\GeoDebugger_DotNet.csproj", "{D51523E1-02D8-41FF-8FE0-2F2C74EC7E1E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoDebuggerCLI", "GeoDebuggerCLI\GeoDebuggerCLI.csproj", "{9BCA00E7-B1F1-4356-A5E0-BF744A51517D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F87891FC-35F2-4A63-A6E7-4769D45B5E1E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoDebuggerTest", "GeoDebuggerTest\GeoDebuggerTest.csproj", "{F900860D-4D45-44B4-9351-76F32D45AC51}"
+	ProjectSection(ProjectDependencies) = postProject
+		{102DCB5F-C47E-4170-80FF-154F1AF88AA0} = {102DCB5F-C47E-4170-80FF-154F1AF88AA0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "De.Dev4Agriculture.GeoDebugger", "De.Dev4Agriculture.GeoDebugger\De.Dev4Agriculture.GeoDebugger.csproj", "{102DCB5F-C47E-4170-80FF-154F1AF88AA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "De.Dev4Agriculture.GeoDebugger.Test", "De.Dev4Agriculture.GeoDebugger.Test\De.Dev4Agriculture.GeoDebugger.Test.csproj", "{E92080D3-79AE-4377-9614-17E0B5AA3113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +22,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D51523E1-02D8-41FF-8FE0-2F2C74EC7E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D51523E1-02D8-41FF-8FE0-2F2C74EC7E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D51523E1-02D8-41FF-8FE0-2F2C74EC7E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D51523E1-02D8-41FF-8FE0-2F2C74EC7E1E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9BCA00E7-B1F1-4356-A5E0-BF744A51517D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9BCA00E7-B1F1-4356-A5E0-BF744A51517D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BCA00E7-B1F1-4356-A5E0-BF744A51517D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,6 +30,14 @@ Global
 		{F900860D-4D45-44B4-9351-76F32D45AC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F900860D-4D45-44B4-9351-76F32D45AC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F900860D-4D45-44B4-9351-76F32D45AC51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{102DCB5F-C47E-4170-80FF-154F1AF88AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102DCB5F-C47E-4170-80FF-154F1AF88AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102DCB5F-C47E-4170-80FF-154F1AF88AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102DCB5F-C47E-4170-80FF-154F1AF88AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E92080D3-79AE-4377-9614-17E0B5AA3113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92080D3-79AE-4377-9614-17E0B5AA3113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E92080D3-79AE-4377-9614-17E0B5AA3113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E92080D3-79AE-4377-9614-17E0B5AA3113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

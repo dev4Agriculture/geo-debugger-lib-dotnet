@@ -1,15 +1,11 @@
 ﻿using GeoJSON.Net.Feature;
-using GeoJSON.Net.Geometry;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace Dev4Agriculture.De.GeoDebugger;
+namespace De.Dev4Agriculture.GeoDebugger
+{
+
 
 internal class MessageToSend
     {
@@ -374,3 +370,4 @@ public class GeoJSONDebug
 		ClearPolygons();
         }
     }
+}

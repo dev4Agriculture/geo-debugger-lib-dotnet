@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0</TargetFramework>
+	  <RootNamespace>De.Dev4Agriculture.GeoDebugger</RootNamespace>
+	  <Version>0.0.2</Version>
+	  <Company>dev4Agriculture</Company>
+	  <Title>GeoDebugger Dotnet Integration</Title>
+	  <Authors>Frank Wiebeler</Authors>
+	  <Description>This library provides access to the GeoDebugger; see https://github.com/dev4Agriculture/geo-debugger-server</Description>
+	  <Copyright>Copyright 2021-2025 by dev4Agriculture</Copyright>
+	  <PackageId>Dev4Agriculture.GeoDebugger</PackageId>
+	  <PackageProjectUrl>https://github.com/dev4Agriculture/geo-debugger-lib-dotnet</PackageProjectUrl>
+	  <PackageIcon>logo_dev4Agriculture.png</PackageIcon>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <RepositoryUrl>https://github.com/dev4Agriculture/geo-debugger-lib-dotnet</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <PackageTags>geojson;debugging;WGS84</PackageTags>
+	  <Version>0.0.2</Version>
+	  <AssemblyVersion>0.0.2</AssemblyVersion>
+	  <FileVersion>0.0.2</FileVersion>
+	  <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/RELEASE-Notes.txt"))</PackageReleaseNotes>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="GeoJSON.Net" Version="1.4.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="../assets/logo_dev4Agriculture.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="../README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="../LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+</Project>

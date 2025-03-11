@@ -2,15 +2,16 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GeoJSON.Net" Version="1.2.19" />
+    <PackageReference Include="GeoJSON.Net" Version="1.4.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GeoDebugger_DotNet\GeoDebugger_DotNet.csproj" />
+    <ProjectReference Include="..\De.Dev4Agriculture.GeoDebugger\De.Dev4Agriculture.GeoDebugger.csproj" />
   </ItemGroup>
 
 </Project>
